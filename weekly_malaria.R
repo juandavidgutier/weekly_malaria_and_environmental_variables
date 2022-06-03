@@ -29,13 +29,23 @@ for (i in 1:length(malaria_ElB$EVIimputed)) {
 incidence <- malaria_ElB$incidence
 ts_incidence <- ts(malaria_ElB$incidence, start = c(2007,1), frequency = 52)
 plot(ts_incidence, main="A",  xlab="Time", ylab="Incidence")
+stlElB_incidence = stl(ts_incidence, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlElB_incidence, range.bars=FALSE)
 
 temp <- malaria_ElB$Temperature
 ts_temp <- ts(malaria_ElB$Temperature, start = c(2007,1), frequency = 52)
+stlElB_temp = stl(ts_temp, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlElB_temp, range.bars=FALSE)
+
 rain <- malaria_ElB$Rainfall
 ts_rain <- ts(malaria_ElB$Rainfall, start = c(2007,1), frequency = 52)
+stlElB_rain = stl(ts_rain, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlElB_rain, range.bars=FALSE)
+
 EVI <- malaria_ElB$EVIimputed
 ts_EVI <- ts(malaria_ElB$EVIimputed, start = c(2007,1), frequency = 52)
+stlElB_EVI = stl(ts_EVI, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlElB_EVI, range.bars=FALSE)
 
 
 #crossbasis funtions
@@ -162,15 +172,25 @@ for (i in 1:length(malaria_Tie$EVIimputed)) {
 #ts
 incidence <- malaria_Tie$incidence
 ts_incidence <- ts(malaria_Tie$incidence, start = c(2007,1), frequency = 52)
-plot(ts_incidence, main="B",  xlab="Time", ylab="Incidence")
-
+plot(ts_incidence, main="A",  xlab="Time", ylab="Incidence")
+stlTie_incidence = stl(ts_incidence, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTie_incidence, range.bars=FALSE)
 
 temp <- malaria_Tie$Temperature
 ts_temp <- ts(malaria_Tie$Temperature, start = c(2007,1), frequency = 52)
+stlTie_temp = stl(ts_temp, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTie_temp, range.bars=FALSE)
+
 rain <- malaria_Tie$Rainfall
 ts_rain <- ts(malaria_Tie$Rainfall, start = c(2007,1), frequency = 52)
+stlTie_rain = stl(ts_rain, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTie_rain, range.bars=FALSE)
+
 EVI <- malaria_Tie$EVIimputed
 ts_EVI <- ts(malaria_Tie$EVIimputed, start = c(2007,1), frequency = 52)
+stlTie_EVI = stl(ts_EVI, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTie_EVI, range.bars=FALSE)
+
 
 
 
@@ -300,15 +320,24 @@ for (i in 1:length(malaria_PtoL$EVIimputed)) {
 #ts
 incidence <- malaria_PtoL$incidence
 ts_incidence <- ts(malaria_PtoL$incidence, start = c(2007,1), frequency = 52)
-plot(ts_incidence, main="C",  xlab="Time", ylab="Incidence")
-
+plot(ts_incidence, main="A",  xlab="Time", ylab="Incidence")
+stlPtoL_incidence = stl(ts_incidence, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlPtoL_incidence, range.bars=FALSE)
 
 temp <- malaria_PtoL$Temperature
 ts_temp <- ts(malaria_PtoL$Temperature, start = c(2007,1), frequency = 52)
+stlPtoL_temp = stl(ts_temp, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlPtoL_temp, range.bars=FALSE)
+
 rain <- malaria_PtoL$Rainfall
 ts_rain <- ts(malaria_PtoL$Rainfall, start = c(2007,1), frequency = 52)
+stlPtoL_rain = stl(ts_rain, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlPtoL_rain, range.bars=FALSE)
+
 EVI <- malaria_PtoL$EVIimputed
 ts_EVI <- ts(malaria_PtoL$EVIimputed, start = c(2007,1), frequency = 52)
+stlPtoL_EVI = stl(ts_EVI, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlPtoL_EVI, range.bars=FALSE)
 
 
 #crossbasis funtions
@@ -437,15 +466,24 @@ for (i in 1:length(malaria_Zar$EVIimputed)) {
 #ts
 incidence <- malaria_Zar$incidence
 ts_incidence <- ts(malaria_Zar$incidence, start = c(2007,1), frequency = 52)
-plot(ts_incidence, main="D",  xlab="Time", ylab="Incidence")
-
+plot(ts_incidence, main="A",  xlab="Time", ylab="Incidence")
+stlZar_incidence = stl(ts_incidence, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlZar_incidence, range.bars=FALSE)
 
 temp <- malaria_Zar$Temperature
 ts_temp <- ts(malaria_Zar$Temperature, start = c(2007,1), frequency = 52)
+stlZar_temp = stl(ts_temp, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlZar_temp, range.bars=FALSE)
+
 rain <- malaria_Zar$Rainfall
 ts_rain <- ts(malaria_Zar$Rainfall, start = c(2007,1), frequency = 52)
+stlZar_rain = stl(ts_rain, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlZar_rain, range.bars=FALSE)
+
 EVI <- malaria_Zar$EVIimputed
 ts_EVI <- ts(malaria_Zar$EVIimputed, start = c(2007,1), frequency = 52)
+stlZar_EVI = stl(ts_EVI, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlZar_EVI, range.bars=FALSE)
 
 
 #crossbasis funtions
@@ -574,15 +612,24 @@ for (i in 1:length(malaria_Tum$EVIimputed)) {
 #ts
 incidence <- malaria_Tum$incidence
 ts_incidence <- ts(malaria_Tum$incidence, start = c(2007,1), frequency = 52)
-plot(ts_incidence, main="E",  xlab="Time", ylab="Incidence")
-
+plot(ts_incidence, main="A",  xlab="Time", ylab="Incidence")
+stlTum_incidence = stl(ts_incidence, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTum_incidence, range.bars=FALSE)
 
 temp <- malaria_Tum$Temperature
 ts_temp <- ts(malaria_Tum$Temperature, start = c(2007,1), frequency = 52)
+stlTum_temp = stl(ts_temp, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTum_temp, range.bars=FALSE)
+
 rain <- malaria_Tum$Rainfall
 ts_rain <- ts(malaria_Tum$Rainfall, start = c(2007,1), frequency = 52)
+stlTum_rain = stl(ts_rain, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTum_rain, range.bars=FALSE)
+
 EVI <- malaria_Tum$EVIimputed
 ts_EVI <- ts(malaria_Tum$EVIimputed, start = c(2007,1), frequency = 52)
+stlTum_EVI = stl(ts_EVI, s.window = 7, s.degree = 1, t.window = NULL, t.degree = 1, robust = TRUE)
+plot(stlTum_EVI, range.bars=FALSE)
 
 
 
